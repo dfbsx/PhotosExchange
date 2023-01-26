@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "style.css" %>
+<div class="insideapp">
+    <%= render partial: "navbar/navbar"%>
+    <div class="maincontainer" >
+        <div class="uploadheader">
+            <p>Dodawanie nowego zdjęcia:</p>
+        </div>
+        <div class="uploadbody">
+            <form action="/action_page.php" class="uploadform">
+                <div class="selectfile">
+                    <label for="img">Wybierz z dysku:</label>
+                    <input type="file" id="img" name="img" accept="image/*" class="file">
+                </div>
+                <input class="photodescription" placeholder="OPIS ZDJĘCIA"/>
+                <button class="longbutton">PRZEŚLIJ</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>    
+

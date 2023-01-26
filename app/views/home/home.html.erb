@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag "style.css" %>
+<div class="insideapp">
+    <%= render partial: "navbar/navbar"%>
+    <div class="maincontainer" >
+        <%= button_to "DODAJĘ", upload_path, method: :get, class:"longbutton"%>
+        <%= button_to "MOJE ZDJĘCIA", myphotos_path, method: :get, class:"longbutton"%>
+        <%= button_to "UDOSTĘPNIONE MI", shared_path, method: :get, class:"longbutton"%>
+    </div>
+</div>    
+

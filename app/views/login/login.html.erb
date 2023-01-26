@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "style.css" %>
+<div class="app">
+<h1>SYSTEM WYMIANY ZDJĘĆ</h1>
+<div class="maincontainer" >
+    <%= form_with url: login_path do |form| %>
+    <div class="logininputsgroup">
+        <%= form.text_field :email, placeholder: "EMAIL"%>
+        <%= form.password_field :password, placeholder: "HASŁO", style:"margin-bottom: 45px"%>
+    </div>
+    <%= form.submit "ZALOGUJ", class: "longbutton" %>
+    <% end %>
+</div>
+</div>

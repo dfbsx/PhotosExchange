@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "navbar.css" %>
+<nav>
+    <h2>
+        SYSTEM WYMIANY ZDJĘĆ
+    </h2>
+    
+    <div class="navcolumn">
+        <%= button_to "WYLOGUJ", logout_path, method: :delete %>
+        <div class="logininfo">zalogowany jako: &nbsp; <span> <%= @user.email %><span></div>
+    </div>
+   
+</nav>
