@@ -4,6 +4,10 @@
     <div class="maincontainer" >
         <div class="uploadheader">
             <p>Dodawanie nowego zdjęcia:</p>
+            <%= button_to root_path, class:"backbutton",  method: :get do %>
+                <i class="fa-solid fa-arrow-left"></i>
+            <% end %>
+            
         </div>
         <div class="uploadbody">
             <form action="/action_page.php" class="uploadform">

@@ -4,6 +4,9 @@
     <div class="maincontainer" >
         <div class="choosebranchheader">
             <p>Zdjęcia wgrane przez Ciebie:</p>
+            <%= button_to root_path, class:"backbutton",  method: :get do %>
+                <i class="fa-solid fa-arrow-left"></i>
+            <% end %>
         </div>
         <div class="photosgrip">
             <div class="singlephotofromgrip">
