@@ -9,7 +9,7 @@ class LoginController < ApplicationController
             redirect_to root_path
         else
             flash[:notice] = "Niepoprawny email lub hasło"
-            render :login
+            redirect_to login_path
         end    
     end
     def destroy 
