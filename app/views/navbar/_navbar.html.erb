@@ -3,10 +3,10 @@
     <h2>
         SYSTEM WYMIANY ZDJĘĆ
     </h2>
-    
+    <% if @user %>
     <div class="navcolumn">
-        <%= button_to "WYLOGUJ", logout_path, method: :delete %>
-        <div class="logininfo">zalogowany jako: &nbsp; <span> <%= @user.email %><span></div>
+        <%= button_to "WYLOGUJ", destroy_path, method: :delete %>
+        <div class="logininfo">zalogowany jako: &nbsp; <span> x<span></div>
     </div>
-   
+   <% end %>
 </nav>
