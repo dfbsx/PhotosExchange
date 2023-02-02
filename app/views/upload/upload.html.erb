@@ -19,8 +19,12 @@
                  <%= button_to "Prześlij", login_path, class:"longbutton",  method: :post %>
             </form>
             -->
-             <%= button_to "Prześlij", submit_path, class:"longbutton",  method: :post %>
-             <%=@photo%>
+            <%= form_with url: submit_path do |f|%>
+                <%=f.text_field :name, placeholder:"Nazwa"%>
+                <%= f.file_field :pic%>
+                <%=f.text_field :desc, placeholder:"Opis"%>
+                <%= f.submit "Prześlij", class:"longbutton",  method: :post %>
+            <%end%>
         </div>
         </div>
     </div>
