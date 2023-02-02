@@ -1,0 +1,6 @@
+<h1>Udało się <%= @result %></h1>
+<% @photos.each do |photo| %>
+    <h3><%=photo.name%></h3>
+    <p><%=photo.data_dodania.strftime("%d.%m.%Y")%></p>
+    <p><%=photo.desc%></p>
+<%end%>

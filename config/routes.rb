@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post 'login' => 'login#create'
   delete 'destroy' => 'login#destroy'
   get 'upload' => 'upload#upload'
+  post 'submit' => 'upload#submit'
+  get 'result' => 'upload#result'
   get 'shared' => 'shared#shared'
   get 'myphotos' => 'shared#my_photos'
 end
