@@ -1,9 +1,1 @@
 <h1>Udało się <%= @result %></h1>
-<% @photos.each do |photo| %>
-    <% if photo.pic.attached? %>
-        <image src="<%=(url_for(photo.pic))%>">
-    <% end %>   
-    <h3><%=photo.name%></h3>
-    <p><%=photo.data_dodania.strftime("%d.%m.%Y - %H:%M:%S")%></p>
-    <p><%=photo.desc%></p>
-<%end%>

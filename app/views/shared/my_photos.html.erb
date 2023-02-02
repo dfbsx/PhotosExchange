@@ -9,39 +9,16 @@
             <% end %>
         </div>
         <div class="photosgrip">
-            <div class="singlephotofromgrip">
-                <img src="https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg"/>
-                <p>Pierwszy piesek z baaaaaaardzo długą nazwą</p>
-            </div>
-            <div class="singlephotofromgrip">
-                <img src"https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445"/>
-                <p>Pierwszy piesek</p>
-            </div>
-            <div class="singlephotofromgrip">
-                <img src="https://paradepets.com/.image/t_share/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg"/>
-                <p>Pierwszy piesek</p>
-            </div>
-            <div class="singlephotofromgrip">
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*">
-                <p>Pierwszy piesek</p>
-            </div>
-              <div class="singlephotofromgrip">
-                <img src="https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg"/>
-                <p>Pierwszy piesek</p>
-            </div>
-            <div class="singlephotofromgrip">
-                <img src"https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445"/>
-                <p>Pierwszy piesek</p>
-            </div>
-            <div class="singlephotofromgrip">
-                <img src="https://paradepets.com/.image/t_share/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg"/>
-                <p>Pierwszy piesek</p>
-            </div>
-            <div class="singlephotofromgrip">
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*">
-                <p>Pierwszy piesek</p>
-            </div>
-            
+            <% @photos.each do |photo| %>
+                <div class="singlephotofromgrip">
+                    <% if photo.pic.attached? %>
+                        <image src="<%=(url_for(photo.pic))%>">
+                    <% end %>   
+                    <h3><%=photo.name%></h3>
+                    <p><%=photo.data_dodania.strftime("%d.%m.%Y - %H:%M:%S")%></p>
+                    <p><%=photo.desc%></p>
+                </div>
+            <%end%>
         </div>
     </div>
 </div>    
