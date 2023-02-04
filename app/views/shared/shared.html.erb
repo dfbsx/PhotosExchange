@@ -4,7 +4,7 @@
     <div class="maincontainer" >
         <div class="choosebranchheader">
             <p>Zdjęcia udostępnione dla Ciebie:</p>
-            <%= button_to root_path, class:"backbutton",  method: :get do %>
+            <%= button_to home_path, class:"backbutton",  method: :get do %>
                 <i class="fa-solid fa-arrow-left"></i>
             <% end %>
         </div>
@@ -17,6 +17,7 @@
                     <h3><%=photo.name%></h3>
                     <p><%=photo.data_dodania.strftime("%d.%m.%Y - %H:%M:%S")%></p>
                     <p><%=photo.desc%></p>
+                    
                     <%= button_to "Download", download_image_path, method: :get, params:{id:photo.id} %>
                 </div>
             <%end%>
