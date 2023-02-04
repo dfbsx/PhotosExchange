@@ -10,11 +10,12 @@
         </div>
         <div class="historygrip">
             <% @downloads.each do |download| %>
-                <div>
-                    <h2><%=download.by_who%></h2>
-                    <p><%=download.date.strftime("%d.%m.%Y - %H:%M:%S")%></P>
-                </div>
+                    <div class="downloadcard">
+                        <p style="color:#18A0DB"><strong><%=download.by_who%></strong></p>
+                        <p><%=download.date.strftime("%d.%m.%Y - %H:%M:%S")%></p>
+                    </div>
             <%end%>
         </div>
     </div>
 </div>    
+

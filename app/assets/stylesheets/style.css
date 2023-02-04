@@ -246,8 +246,35 @@ input[type=file]::file-selector-button {
 }
 
 .historygrip{
+    margin-top: 8px;
     display: flex;
     flex:1;
+    width: 100%;
+}
+
+.downloadcard{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #a7a7a7;
+    border-radius: 8px;
+    padding:8px;
+    align-items: center;
+}
+
+.downloadphoto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 32px;
+}
+
+.photodesc{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 
 

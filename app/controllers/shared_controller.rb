@@ -10,12 +10,10 @@ class SharedController < ApplicationController
     def download
         @info =params[:id]
         @photo =Photo.find(params[:id]) #Photo.where(id:params[:id])
-        @photo.downloads.create(by_who:Current_user.email, date:Time.now, )
+        @photo.downloads.create(by_who:Current.user.email, date:Time.now, )
     end
 
     def history
-        @info =params[:id]
-        #@photo =Photo.find(params[:id])
         @downloads =Download.where(photo_id:params[:id])
     end
 end

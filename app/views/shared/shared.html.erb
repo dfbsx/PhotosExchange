@@ -17,8 +17,7 @@
                     <h3><%=photo.name%></h3>
                     <p><%=photo.data_dodania.strftime("%d.%m.%Y - %H:%M:%S")%></p>
                     <p><%=photo.desc%></p>
-                    
-                    <%= button_to "Download", download_image_path, method: :get, params:{id:photo.id} %>
+                    <%= button_to "Pobierz",  download_image_path, class: "historybutton", method: :get, params:{id:photo.id} %>
                 </div>
             <%end%>
         </div>
