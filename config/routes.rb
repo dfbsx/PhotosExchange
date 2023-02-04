@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 
   # path w url    kontroler# funkcja
+  get 'home' => 'home#home'
   get 'login' => 'login#login'
   post 'login' => 'login#create'
   delete 'destroy' => 'login#destroy'

@@ -1,8 +1,20 @@
-<div>
-    <% @downloads.each do |download| %>
-        <div>
-            <h2><%=download.by_who%></h2>
-            <p><%=download.date.strftime("%d.%m.%Y - %H:%M:%S")%></P>
+<%= stylesheet_link_tag "style.css" %>
+<div class="insideapp">
+    <%= render partial: "navbar/navbar"%>
+    <div class="maincontainer" >
+        <div class="choosebranchheader">
+            <p>Historia pobrań:</p>
+            <%= button_to myphotos_path, class:"backbutton",  method: :get do %>
+                <i class="fa-solid fa-arrow-left"></i>
+            <% end %>
         </div>
-    <%end%>
-</div>
+        <div class="historygrip">
+            <% @downloads.each do |download| %>
+                <div>
+                    <h2><%=download.by_who%></h2>
+                    <p><%=download.date.strftime("%d.%m.%Y - %H:%M:%S")%></P>
+                </div>
+            <%end%>
+        </div>
+    </div>
+</div>    

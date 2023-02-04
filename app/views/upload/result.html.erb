@@ -1,1 +1,17 @@
-<h1>Udało się <%= @result %></h1>
+<%= stylesheet_link_tag "style.css" %>
+<div class="insideapp">
+    <%= render partial: "navbar/navbar"%>
+    <div class="maincontainer" >
+        <div class="uploadheader">
+            <p>Dodawanie nowego zdjęcia:</p>
+            <%= button_to home_path, class:"backbutton",  method: :get do %>
+                <i class="fa-solid fa-arrow-left"></i>
+            <% end %>
+            
+        </div>
+        <div class="resultbody">
+            <div><%= flash[:notice] %></div>
+        </div>
+        </div>
+    </div>
+</div> 
