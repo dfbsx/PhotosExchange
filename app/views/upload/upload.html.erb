@@ -10,14 +10,21 @@
             
         </div>
         <div class="uploadbody">
-            <form action="/action_page.php" class="uploadform">
+            <!--<form action="/action_page.php" class="uploadform">
                 <div class="selectfile">
                     <label for="img">Wybierz z dysku:</label>
                     <input type="file" id="img" name="img" accept="image/*" class="file">
                 </div>
                 <input class="photodescription" placeholder="OPIS ZDJĘCIA"/>
-                <button class="longbutton">PRZEŚLIJ</button>
+                 <%= button_to "Prześlij", login_path, class:"longbutton",  method: :post %>
             </form>
+            -->
+            <%= form_with url: submit_path do |f|%>
+                <%=f.text_field :name, placeholder:"Nazwa"%>
+                <%= f.file_field :pic%>
+                <%=f.text_field :desc, placeholder:"Opis"%>
+                <%= f.submit "Prześlij", class:"longbutton",  method: :post %>
+            <%end%>
         </div>
         </div>
     </div>

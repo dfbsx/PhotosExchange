@@ -1,0 +1,8 @@
+<div>
+    <% @downloads.each do |download| %>
+        <div>
+            <h2><%=download.by_who%></h2>
+            <p><%=download.date.strftime("%d.%m.%Y - %H:%M:%S")%></P>
+        </div>
+    <%end%>
+</div>
