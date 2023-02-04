@@ -1,6 +1,6 @@
 class SharedController < ApplicationController
     def shared
-        @photos = Photo.joins("JOIN users ON users.id = photos.user_id AND users.department="+"'#{Current.user.department.to_s}'")
+        @photos = Photo.joins("JOIN users ON users.id = photos.user_id AND users.department="+"'#{Current.user.department.to_s}' AND users.id != "+" '#{Current.user.id}'")
     end
 
     def my_photos
