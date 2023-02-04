@@ -1,6 +1,6 @@
 class SharedController < ApplicationController
     def shared
-        @photos = Photo.where(User.find(user_id).department:Current.user.department)
+        @photos = Photo.where(user: { department: Current.user.department }) #Photo.where(User.find(user.id).department:Current_user.department)
     end
 
     def my_photos
@@ -10,7 +10,7 @@ class SharedController < ApplicationController
     def download
         @info =params[:id]
         @photo =Photo.find(params[:id]) #Photo.where(id:params[:id])
-        @photo.downloads.create(by_who:Current.user.email, date:Time.now)
+        @photo.downloads.create(by_who:Current_user.email, date:Time.now)
     end
 
     def history
